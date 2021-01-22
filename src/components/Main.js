@@ -1,5 +1,7 @@
 import React, {Fragment, Component} from 'react'
-
+import {
+  Link
+} from 'react-router-dom'
 export default class Main extends Component{
   constructor(props){
     super(props)
@@ -26,21 +28,17 @@ export default class Main extends Component{
       )
     }else {
       return(
-        this.state.memes.map((memes)=>{
-          return(
-            <article key={memes.id}>
-              <h2>{memes.name}</h2>
-              <div style={{
-                backgroundImage: 'url("'+memes.url+'")',
-                backgroundSize: 'contain',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'top',
-                height: '90vh',
-                margin: 'auto'
-              }}></div>
-            </article>
-          )
-        })
+        <main>
+          {this.state.memes.map((memes)=>{
+            return(
+              <article key={memes.id}>
+                <h2>{memes.name}</h2>
+                <img src={memes.url}></img>
+                <Link to={memes.url} target="_blank" download={memes.name}>Download</Link>
+              </article>
+            )
+          })}
+        </main>
       )
 
     }

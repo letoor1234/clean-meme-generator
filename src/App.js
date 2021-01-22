@@ -7,7 +7,7 @@ import Header from './components/Header.js'
 import Nav from './components/Nav.js'
 import Main from './components/Main.js'
 
-import './App.css';
+import './styles.css';
 
 function App() {
   return (
