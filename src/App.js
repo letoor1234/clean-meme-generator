@@ -6,7 +6,7 @@ import {
 
 import Header from './components/Header.js'
 import Nav from './components/Nav.js'
-import {Link} from './components/Main.js'
+import {Galery} from './components/Main.js'
 
 import './styles.css';
 
