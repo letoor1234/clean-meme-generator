@@ -2,14 +2,14 @@ import React, {Fragment, Component} from 'react'
 import {
   Link
 } from 'react-router-dom'
-export default class Main extends Component{
+export class Galery extends Component{
   constructor(props){
     super(props)
     this.state={
       memes: []
     }
   }
-  componentWillMount(){
+  componentDidMount(){
     fetch('https://api.imgflip.com/get_memes')
       .then((response)=>{
         return response.json()

@@ -1,11 +1,12 @@
 import React, {Fragment} from 'react';
 import {
-  BrowserRouter as Router
+  BrowserRouter as Router,
+  Route
 } from 'react-router-dom'
 
 import Header from './components/Header.js'
 import Nav from './components/Nav.js'
-import Main from './components/Main.js'
+import {Link} from './components/Main.js'
 
 import './styles.css';
 
@@ -20,7 +21,9 @@ function App() {
           buttons={['randomize', 'searching', 'all']}
           paths={['/random', '/search', '/all']}
         />
-        <Main/>
+        <Route path='/all'>
+          <Galery/>
+        </Route>
       </Router>
     </Fragment>
   );
