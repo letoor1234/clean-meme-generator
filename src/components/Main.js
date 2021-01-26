@@ -1,4 +1,4 @@
-import React, {Fragment, Component} from 'react'
+import React, {Component} from 'react'
 import {
   Link
 } from 'react-router-dom'
@@ -29,12 +29,12 @@ export class Galery extends Component{
       )
     }else {
       return(
-        <main>
+        <main id='galery'>
           {this.state.memes.map((memes)=>{
             return(
               <article className='galery-item'key={memes.id}>
                 <h2>{memes.name}</h2>
-                <img src={memes.url}></img>
+                <img src={memes.url} alt={memes.name}></img>
                 <Link to={memes.url} target="_blank" download={memes.name}>Download</Link>
               </article>
             )
