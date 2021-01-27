@@ -8,7 +8,7 @@ import Header from './components/Header.js'
 import Nav from './components/Nav.js'
 import {Galery, Random} from './components/Main.js'
 
-import './styles.css';
+import './css/styles.css';
 
 function App() {
   return (
