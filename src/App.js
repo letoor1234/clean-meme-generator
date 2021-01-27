@@ -6,7 +6,8 @@ import {
 
 import Header from './components/Header.js'
 import Nav from './components/Nav.js'
-import {Galery, Random} from './components/Main.js'
+import Galery from './components/Galery.js'
+import Random from './components/Random.js'
 
 import './css/styles.css';
 
@@ -18,8 +19,8 @@ function App() {
           title='Clean Meme Searcher!!!'
         />
         <Nav
-          buttons={['randomize', 'searching', 'all']}
-          paths={['/random', '/search', '/all']}
+          buttons={['randomize', 'all', 'search', 'about']}
+          paths={['/random', '/all', '/search', '/about']}
         />
         <Route path='/all'>
           <Galery/>
