@@ -7,7 +7,9 @@ export class Galery extends Component{
   constructor(props){
     super(props)
     this.state={
-      memes: []
+      memes: [],
+      limit: 8,
+      loadMore: (<button type='button' onClick={this.loadMore}>More..</button>)
     }
   }
   componentDidMount(){
@@ -22,6 +24,19 @@ export class Galery extends Component{
         console.log(this.state.memes)
       })
   }
+  loadMore=()=>{
+    if(this.state.limit < this.state.memes.length){
+      this.setState({
+        limit: this.state.limit + 8
+      })
+    }else{
+      this.setState({
+        loadMore: (<p>This is all here!!</p>)
+      })
+    }
+
+
+  }
   render(){
     if(this.state.memes <= 0){
       return(
@@ -30,7 +45,7 @@ export class Galery extends Component{
     }else {
       return(
         <main id='galery'>
-          {this.state.memes.map((memes)=>{
+          {this.state.memes.slice(0, this.state.limit).map((memes)=>{
             return(
               <article className='galery-item'key={memes.id}>
                 <h2>{memes.name}</h2>
@@ -39,6 +54,7 @@ export class Galery extends Component{
               </article>
             )
           })}
+          {this.state.loadMore}
         </main>
       )
 
