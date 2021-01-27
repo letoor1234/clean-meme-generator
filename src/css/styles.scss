@@ -4,20 +4,17 @@
   box-sizing: border-box;
   background-clip: border-box;
 }
+//This file is the main SCSS, it contains everything about position, box properties, display, etc.
+//The fonts, text, backgrounds and border properties are avaible into the next imported files:
+@import 'background.scss';
+@import 'fonts.scss';
 body{
-  width: calc(100vw - (100vw - 100%));
-  font-size: 1.5vw;
-  font-family: Arial;
+  width: calc(100vw - (100vw - 100%));//A responsive width
   header{
     width: 100%;
-    background-color: black;
-    color: white;
     padding: 2em;
     padding-bottom: .5em;
-    h1{
-      font-size: 250%;
-      text-align: center;
-    }
+
   }
   nav{
     display: flex;
@@ -26,24 +23,11 @@ body{
     width: 100%;
     margin: auto;
     padding: 1em;
-    background-color: black;
     a{
-      color: white;
-      background-color: green;
       padding: 2%;
-
-      text-decoration: none;
-      font-weight: bold;
-      text-transform: uppercase;
-      &:hover{
-        background-color: lighten(green, 15%);
-        color: black;
-      }
     }
   }
   #loading{
-    font-size: 200%;
-    text-align: center;
     margin: auto;
   }
 
@@ -61,12 +45,7 @@ body{
 
       max-height: 60vh;
       overflow: hidden;
-
-      background-color: lighten(grey, 35%);
-      border-bottom: solid 1em lighten(grey, 35%);
       h2{
-        text-align: center;
-        font-size: 200%;
         margin-bottom: 1em;
       }
       img{
@@ -81,20 +60,8 @@ body{
         transform: translateX(-50%);
         bottom: 1em;
         display: inline-block;
-        font-size: 100%;
-        font-weight: bold;
-        text-decoration: none;
-        color: white;
-        background-color: green;
 
         padding: .4em;
-        border-radius: 16px;
-        box-shadow: 4px 4px rgba(0,0,0,0.3);
-        &:hover{
-          color: black;
-          background-color: lighten(green, 15%);
-          box-shadow: 4px 4px rgba(0,0,0,0.6);
-        }
       }
     }
   }
@@ -102,17 +69,7 @@ body{
     margin: auto;
     width: 40%;
     display: block;
-    background-color: lighten(blue, 20%);
-    border-style: none;
-    border-radius: 4px;
     padding: 1em;
-    font-size: 110%;
-    font-weight: bold;
-    text-align: center;
-    &:hover{
-      background-color: lighten(blue, 27%);
-      cursor: pointer;
-    }
   }
   #random{
     width:100%;
@@ -121,28 +78,15 @@ body{
       margin: auto;
       width: 40%;
       display: block;
-      background-color: lighten(blue, 20%);
-      border-style: none;
-      border-radius: 4px;
       padding: 1em;
-      font-size: 150%;
-      font-weight: bold;
-      text-align: center;
-      &:hover{
-        background-color: lighten(blue, 27%);
-        cursor: pointer;
-      }
     }
     .random-item{
       width: 80%;
       padding: 1em;
       margin: auto;
       position: relative;
-      background-color: lighten(grey, 35%);
-      border-bottom: solid 1em lighten(grey, 35%);
+
       h2{
-        text-align: center;
-        font-size: 200%;
         margin-bottom: 1em;
       }
       img{
@@ -158,20 +102,8 @@ body{
         transform: translateX(-50%);
         bottom: .2em;
         display: inline-block;
-        font-size: 200%;
-        font-weight: bold;
-        text-decoration: none;
-        color: white;
-        background-color: green;
 
         padding: .4em;
-        border-radius: 16px;
-        box-shadow: 4px 4px rgba(0,0,0,0.3);
-        &:hover{
-          color: black;
-          background-color: lighten(green, 15%);
-          box-shadow: 4px 4px rgba(0,0,0,0.6);
-        }
       }
     }
   }

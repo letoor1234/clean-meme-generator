@@ -1,0 +1,66 @@
+//main : styles.scss
+//This file contains only fonts and text properties
+
+body{
+  font-size: 1.5vw;//This is a responsive font size based on the viewport width
+  font-family: Arial;
+  header{
+    color: white;
+    h1{
+      font-size: 250%;
+      text-align: center;
+    }
+  }
+  nav{
+    a{
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  #loading{
+    font-size: 200%;
+    text-align: center;
+  }
+
+  #galery{
+    .galery-item{
+      h2{
+        text-align: center;
+        font-size: 200%;
+      }
+      a{
+        font-size: 100%;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+  .load-more-btn{
+    font-size: 110%;
+    font-weight: bold;
+    text-align: center;
+  }
+  #random{
+    button{
+      font-size: 150%;
+      font-weight: bold;
+      text-align: center;
+    }
+    .random-item{
+
+      h2{
+        text-align: center;
+        font-size: 200%;
+      }
+      a{
+        font-size: 200%;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}

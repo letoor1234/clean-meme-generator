@@ -5,23 +5,147 @@
   background-clip: border-box;
 }
 
+body header {
+  background-color: black;
+}
+
+body nav {
+  background-color: black;
+}
+
+body nav a {
+  background-color: green;
+}
+
+body nav a:hover {
+  background-color: #00cd00;
+  color: black;
+}
+
+body #galery .galery-item {
+  background-color: #d9d9d9;
+  border-bottom: solid 1em #d9d9d9;
+}
+
+body #galery .galery-item a {
+  background-color: green;
+  border-radius: 16px;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+body #galery .galery-item a:hover {
+  color: black;
+  background-color: #00cd00;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+body .load-more-btn {
+  background-color: #6666ff;
+  border-style: none;
+  border-radius: 4px;
+}
+
+body .load-more-btn:hover {
+  background-color: #8a8aff;
+  cursor: pointer;
+}
+
+body #random button {
+  background-color: #6666ff;
+  border-style: none;
+  border-radius: 4px;
+}
+
+body #random button:hover {
+  background-color: #8a8aff;
+  cursor: pointer;
+}
+
+body #random .random-item {
+  background-color: #d9d9d9;
+  border-bottom: solid 1em #d9d9d9;
+}
+
+body #random .random-item a {
+  background-color: green;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+body #random .random-item a:hover {
+  background-color: #00cd00;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.6);
+}
+
 body {
-  width: calc(100vw - (100vw - 100%));
   font-size: 1.5vw;
   font-family: Arial;
 }
 
 body header {
-  width: 100%;
-  background-color: black;
   color: white;
-  padding: 2em;
-  padding-bottom: .5em;
 }
 
 body header h1 {
   font-size: 250%;
   text-align: center;
+}
+
+body nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+body #loading {
+  font-size: 200%;
+  text-align: center;
+}
+
+body #galery .galery-item h2 {
+  text-align: center;
+  font-size: 200%;
+}
+
+body #galery .galery-item a {
+  font-size: 100%;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+body .load-more-btn {
+  font-size: 110%;
+  font-weight: bold;
+  text-align: center;
+}
+
+body #random button {
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+}
+
+body #random .random-item h2 {
+  text-align: center;
+  font-size: 200%;
+}
+
+body #random .random-item a {
+  font-size: 200%;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  width: calc(100vw - (100vw - 100%));
+}
+
+body header {
+  width: 100%;
+  padding: 2em;
+  padding-bottom: .5em;
 }
 
 body nav {
@@ -30,26 +154,13 @@ body nav {
   width: 100%;
   margin: auto;
   padding: 1em;
-  background-color: black;
 }
 
 body nav a {
-  color: white;
-  background-color: green;
   padding: 2%;
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-body nav a:hover {
-  background-color: #00cd00;
-  color: black;
 }
 
 body #loading {
-  font-size: 200%;
-  text-align: center;
   margin: auto;
 }
 
@@ -67,13 +178,9 @@ body #galery .galery-item {
   position: relative;
   max-height: 60vh;
   overflow: hidden;
-  background-color: #d9d9d9;
-  border-bottom: solid 1em #d9d9d9;
 }
 
 body #galery .galery-item h2 {
-  text-align: center;
-  font-size: 200%;
   margin-bottom: 1em;
 }
 
@@ -90,38 +197,14 @@ body #galery .galery-item a {
   transform: translateX(-50%);
   bottom: 1em;
   display: inline-block;
-  font-size: 100%;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
-  background-color: green;
   padding: .4em;
-  border-radius: 16px;
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.3);
-}
-
-body #galery .galery-item a:hover {
-  color: black;
-  background-color: #00cd00;
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.6);
 }
 
 body .load-more-btn {
   margin: auto;
   width: 40%;
   display: block;
-  background-color: #6666ff;
-  border-style: none;
-  border-radius: 4px;
   padding: 1em;
-  font-size: 110%;
-  font-weight: bold;
-  text-align: center;
-}
-
-body .load-more-btn:hover {
-  background-color: #8a8aff;
-  cursor: pointer;
 }
 
 body #random {
@@ -133,18 +216,7 @@ body #random button {
   margin: auto;
   width: 40%;
   display: block;
-  background-color: #6666ff;
-  border-style: none;
-  border-radius: 4px;
   padding: 1em;
-  font-size: 150%;
-  font-weight: bold;
-  text-align: center;
-}
-
-body #random button:hover {
-  background-color: #8a8aff;
-  cursor: pointer;
 }
 
 body #random .random-item {
@@ -152,13 +224,9 @@ body #random .random-item {
   padding: 1em;
   margin: auto;
   position: relative;
-  background-color: #d9d9d9;
-  border-bottom: solid 1em #d9d9d9;
 }
 
 body #random .random-item h2 {
-  text-align: center;
-  font-size: 200%;
   margin-bottom: 1em;
 }
 
@@ -175,18 +243,5 @@ body #random .random-item a {
   transform: translateX(-50%);
   bottom: .2em;
   display: inline-block;
-  font-size: 200%;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
-  background-color: green;
   padding: .4em;
-  border-radius: 16px;
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.3);
-}
-
-body #random .random-item a:hover {
-  color: black;
-  background-color: #00cd00;
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.6);
 }

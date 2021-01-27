@@ -1,0 +1,69 @@
+//main : styles.scss
+//This file contains only backgrounds, borders and some hovers too
+body{
+  header{
+    background-color: black;
+  }
+  nav{
+    background-color: black;
+    a{
+      background-color: green;
+      &:hover{
+        background-color: lighten(green, 15%);
+        color: black;
+      }
+    }
+  }
+
+  #galery{
+    .galery-item{
+      background-color: lighten(grey, 35%);
+      border-bottom: solid 1em lighten(grey, 35%);
+      a{
+        background-color: green;
+
+        border-radius: 16px;
+        box-shadow: 4px 4px rgba(0,0,0,0.3);
+        &:hover{
+          color: black;
+          background-color: lighten(green, 15%);
+          box-shadow: 4px 4px rgba(0,0,0,0.6);
+        }
+      }
+    }
+  }
+  .load-more-btn{
+    background-color: lighten(blue, 20%);
+    border-style: none;
+    border-radius: 4px;
+    &:hover{
+      background-color: lighten(blue, 27%);
+      cursor: pointer;
+    }
+  }
+  #random{
+    button{
+      background-color: lighten(blue, 20%);
+      border-style: none;
+      border-radius: 4px;
+      &:hover{
+        background-color: lighten(blue, 27%);
+        cursor: pointer;
+      }
+    }
+    .random-item{
+      background-color: lighten(grey, 35%);
+      border-bottom: solid 1em lighten(grey, 35%);
+
+      a{
+        background-color: green;
+
+        box-shadow: 4px 4px rgba(0,0,0,0.3);
+        &:hover{
+          background-color: lighten(green, 15%);
+          box-shadow: 4px 4px rgba(0,0,0,0.6);
+        }
+      }
+    }
+  }
+}
