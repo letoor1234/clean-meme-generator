@@ -6,7 +6,7 @@ import {
 
 import Header from './components/Header.js'
 import Nav from './components/Nav.js'
-import {Galery} from './components/Main.js'
+import {Galery, Random} from './components/Main.js'
 
 import './styles.css';
 
@@ -23,6 +23,9 @@ function App() {
         />
         <Route path='/all'>
           <Galery/>
+        </Route>
+        <Route path='/random'>
+          <Random/>
         </Route>
       </Router>
     </Fragment>

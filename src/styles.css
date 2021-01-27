@@ -105,3 +105,88 @@ body #galery .galery-item a:hover {
   background-color: #00cd00;
   box-shadow: 4px 4px rgba(0, 0, 0, 0.6);
 }
+
+body .load-more-btn {
+  margin: auto;
+  width: 40%;
+  display: block;
+  background-color: #6666ff;
+  border-style: none;
+  border-radius: 4px;
+  padding: 1em;
+  font-size: 110%;
+  font-weight: bold;
+  text-align: center;
+}
+
+body .load-more-btn:hover {
+  background-color: #8a8aff;
+  cursor: pointer;
+}
+
+body #random {
+  width: 100%;
+  padding: .5em;
+}
+
+body #random button {
+  margin: auto;
+  width: 40%;
+  display: block;
+  background-color: #6666ff;
+  border-style: none;
+  border-radius: 4px;
+  padding: 1em;
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+}
+
+body #random button:hover {
+  background-color: #8a8aff;
+  cursor: pointer;
+}
+
+body #random .random-item {
+  width: 80%;
+  padding: 1em;
+  margin: auto;
+  position: relative;
+  background-color: #d9d9d9;
+  border-bottom: solid 1em #d9d9d9;
+}
+
+body #random .random-item h2 {
+  text-align: center;
+  font-size: 200%;
+  margin-bottom: 1em;
+}
+
+body #random .random-item img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+body #random .random-item a {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: .2em;
+  display: inline-block;
+  font-size: 200%;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: green;
+  padding: .4em;
+  border-radius: 16px;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+body #random .random-item a:hover {
+  color: black;
+  background-color: #00cd00;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.6);
+}
