@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-export default class Random extends Component{
+export default class Randomizer extends Component{
   //Initial states are defined into constructor
   constructor(props){
     super(props)

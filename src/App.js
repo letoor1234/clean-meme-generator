@@ -7,7 +7,8 @@ import {
 import Header from './components/Header.js'
 import Nav from './components/Nav.js'
 import Galery from './components/Galery.js'
-import Random from './components/Random.js'
+import Randomizer from './components/Randomizer.js'
+import Searcher from './components/Searcher.js'
 
 import './css/styles.css';
 
@@ -22,11 +23,14 @@ function App() {
           buttons={['randomize', 'all', 'search', 'about']}
           paths={['/random', '/all', '/search', '/about']}
         />
+        <Route path='/random'>
+          <Randomizer/>
+        </Route>
         <Route path='/all'>
           <Galery/>
         </Route>
-        <Route path='/random'>
-          <Random/>
+        <Route path='/search'>
+          <Searcher/>
         </Route>
       </Router>
     </Fragment>
