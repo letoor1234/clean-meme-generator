@@ -8,7 +8,6 @@ import Header from './components/Header.js'
 import Nav from './components/Nav.js'
 import Galery from './components/Galery.js'
 import Randomizer from './components/Randomizer.js'
-import Searcher from './components/Searcher.js'
 
 import './css/styles.css';
 
