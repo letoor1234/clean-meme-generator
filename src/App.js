@@ -20,17 +20,14 @@ function App() {
           title='Clean Meme Searcher!!!'
         />
         <Nav
-          buttons={['randomize', 'all', 'search', 'about']}
-          paths={['/random', '/all', '/search', '/about']}
+          buttons={['galery', 'randomize', 'about']}
+          paths={['/', '/randomize', '/about']}
         />
-        <Route path='/random'>
-          <Randomizer/>
-        </Route>
-        <Route path='/all'>
+        <Route path='/' exact>
           <Galery/>
         </Route>
-        <Route path='/search'>
-          <Searcher/>
+        <Route path='/randomize'>
+          <Randomizer/>
         </Route>
       </Router>
     </Fragment>
