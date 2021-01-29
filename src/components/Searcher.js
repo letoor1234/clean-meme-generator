@@ -62,6 +62,7 @@ export default class Searcher extends Component{
                   <h2>Nothing found</h2>
                 )
               }
+              return 0
             })
           }
 
