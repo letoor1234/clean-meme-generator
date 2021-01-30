@@ -43,20 +43,34 @@ body .load-more-btn {
   background-color: #6666ff;
   border-style: none;
   border-radius: 4px;
+  color: white;
 }
 
 body .load-more-btn:hover {
   background-color: #8a8aff;
   cursor: pointer;
+  color: black;
+}
+
+body .no-more-load {
+  background-color: #b3b3ff;
+  border-style: none;
+  border-radius: 4px;
+}
+
+body #search-input {
+  border-radius: 4px;
 }
 
 body #random button {
   background-color: #6666ff;
   border-style: none;
   border-radius: 4px;
+  color: white;
 }
 
 body #random button:hover {
+  color: black;
   background-color: #8a8aff;
   cursor: pointer;
 }
@@ -68,6 +82,7 @@ body #random .random-item {
 
 body #random .random-item a {
   background-color: green;
+  border-radius: 16px;
   box-shadow: 4px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -114,8 +129,8 @@ body #galery .galery-item a {
   color: white;
 }
 
-body .load-more-btn {
-  font-size: 110%;
+body .load-more-btn, body .no-more-load, body #search-input {
+  font-size: 130%;
   font-weight: bold;
   text-align: center;
 }
@@ -200,11 +215,13 @@ body #galery .galery-item a {
   padding: .4em;
 }
 
-body .load-more-btn {
+body .load-more-btn, body .no-more-load, body #search-input {
   margin: auto;
   width: 40%;
   display: block;
-  padding: 1em;
+  padding: .5em;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
 
 body #random {
@@ -217,6 +234,8 @@ body #random button {
   width: 40%;
   display: block;
   padding: 1em;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
 
 body #random .random-item {

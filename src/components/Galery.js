@@ -12,9 +12,9 @@ export default class Galery extends Component{
       //the button that load more items from the array, with the function call for these
       loadMore: (<button  className='load-more-btn'type='button' onClick={this.loadMore}>Load more...</button>),
       //text state for the search input value(line 82 and 90)
-      text: "",
+      text: '',
       //another empty array for display items when you write in the input
-      buscado: []
+      buscado: [],
     }
   }
   //when the component has been rendered, this function will call to API
@@ -29,7 +29,9 @@ export default class Galery extends Component{
       //Promise, the response (list) is seted into the "memes" state
       .then((list)=>{
         this.setState({
+          //backup
           memes: list.data.memes,
+          //list to be filtered
           buscado: list.data.memes
         })
       })
@@ -56,12 +58,12 @@ export default class Galery extends Component{
     })
     if(newArray.length > 8){
       this.setState({
-        loadMore: (<button  className='load-more-btn'type='button' onClick={this.loadMore}>Load more...</button>),
+        loadMore: (<button className='load-more-btn'type='button' onClick={this.loadMore}>Load more...</button>),
       })
     }else{
       this.setState({
         //if there is no more items to show, the "loadMore" state is changed to a paragraph
-        loadMore: (<p className='load-more-btn'>This is all here!!</p>)
+        loadMore: (<p className='no-more-load'>This is all here!!</p>)
       })
     }
   }
@@ -77,25 +79,27 @@ export default class Galery extends Component{
     }else{
       this.setState({
         //if there is no more items to show, the "loadMore" state is changed to a paragraph
-        loadMore: (<p className='load-more-btn'>This is all here!!</p>)
+        loadMore: (<p className='no-more-load'>This is all here!!</p>)
       })
     }
   }
   render(){
+    //a const to save the input component, to don't repeat the code :v
+    const searcher = (<input type='text' id='search-input' value={this.state.text} placeholder='Search...'
+    onChange={(text)=>this.filter(text)} />)
+
     //If the response isn't set yet, retur a simple text box
     if(this.state.buscado <= 0){
       return(
         <Fragment>
-        <input type='text' id='search-input' value={this.state.text}
-        onChange={(text)=>this.filter(text)} />
+        {searcher}
         <div id='loading'>Nothing to do here</div>
         </Fragment>
       )
     }else {//when the response is avaible, return the "galery" component
       return(
         <Fragment>
-          <input type='text' id='search-input' value={this.state.text}
-          onChange={(text)=>this.filter(text)} />
+          {searcher}
           <main id='galery'>
             {/*an iterator to show the items from state array "memes"*/}
             {this.state.buscado.slice(0, this.state.limit).map((memes)=>{

@@ -65,11 +65,13 @@ body{
       }
     }
   }
-  .load-more-btn{
+  .load-more-btn, .no-more-load, #search-input{
     margin: auto;
     width: 40%;
     display: block;
-    padding: 1em;
+    padding: .5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
   }
   #random{
     width:100%;
@@ -79,6 +81,8 @@ body{
       width: 40%;
       display: block;
       padding: 1em;
+      margin-top: .5em;
+      margin-bottom: .5em;
     }
     .random-item{
       width: 80%;

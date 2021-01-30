@@ -12,9 +12,11 @@ export default class Randomizer extends Component{
       //a initial boolean that set if the item is rendered or not
       getRandom: false
     }
+    this._isMounted = false;
   }
   //calling to the API
   componentDidMount(){
+    this._isMounted = true;
     fetch('https://api.imgflip.com/get_memes')
     .then((response)=>{
       return response.json()
