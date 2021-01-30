@@ -48,24 +48,29 @@ export default class Galery extends Component{
       //i don't know what it is
       return itemData.indexOf(textData) > -1
     })
-    this.loadMore()
     //changing the state
     this.setState({
+      buscado: newArray,
       //input
       text: text,
-      //array filtered
-      buscado: newArray,
-      //setting limit again to 8
-      limit: 8
     })
-
+    if(newArray.length > 8){
+      this.setState({
+        loadMore: (<button  className='load-more-btn'type='button' onClick={this.loadMore}>Load more...</button>),
+      })
+    }else{
+      this.setState({
+        //if there is no more items to show, the "loadMore" state is changed to a paragraph
+        loadMore: (<p className='load-more-btn'>This is all here!!</p>)
+      })
+    }
   }
   //LOAD MORE FUNCTION
   loadMore=()=>{
     this.setState({
       limit: this.state.limit +8
     })
-    if(this.state.limit+8 > this.state.buscado.length){
+    if(this.state.limit+8 <= this.state.buscado.length){
       this.setState({
         loadMore: (<button  className='load-more-btn'type='button' onClick={this.loadMore}>Load more...</button>),
       })
